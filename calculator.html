@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>calculator</title>
+    
+</head>
+<body>
+    
+    <div id="con1">
+
+    <input id="screen">
+
+
+    
+   <div id="casio"> CASIO fx-991MS</div>
+    <div id="solar"> 
+
+    </div>
+   <div id="buttons">
+   <table>
+   
+    <tr id="line1">
+        <td><button onclick="send(1)">1</button></td>
+        <td><button onclick="send(2)">2</button></td>
+        <td><button onclick="send(3)">3</button></td>
+        <td><button onclick="send(4)">4</button></td>
+        <td><button onclick="send(5)">5</button></td>
+
+    </tr>
+    <tr id="line2">
+        <td><button onclick="send(6)">6</button></td>
+        <td><button onclick="send(7)">7</button></td>
+        <td><button onclick="send(8)">8</button></td>
+        <td><button onclick="send(9)">9</button></td>
+        <td><button onclick="send(0)">0</button></td>
+
+    </tr>
+    <tr id="line3">
+        <td><button onclick="send('+')">+</button></td>
+        <td><button onclick="send('-')">-</button></td>
+        <td><button onclick="send('/')">/</button></td>
+        <td><button onclick="send('*')">*</button></td>
+        <td><button onclick="send('=')">=</button></td>
+
+    </tr>
+    <tr id="line3">
+        <td><button onclick="send('log')">Log</button></td>
+        <td><button onclick="send('root')">Root</button></td>
+        <td><button onclick="send('inverse')">Inverse</button></td>
+        <td><button onclick="send('.')">.</button></td>
+        <td><button onclick="send('AC')" style="color: rgb(46, 46, 203);">AC</button></td>
+
+    </tr>
+   </table>
+
+
+   </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+
+
+
+
+</body>
+
+
+
+
+
+
+
+
+
+<style>
+    
+    @font-face {
+  font-family: 'digital-7';
+  src: url('../fonts/digital-7.ttf');
+}
+#con1{
+    width: 500px;
+    height: 400px;
+    background-color: black;
+    margin: auto;
+    border: 2.5px solid;
+    border-color: blueviolet ;
+    margin-top: 150px;
+}
+#screen{
+    width: 470px;
+    height: 75px;
+    background-color :rgb(10, 55, 10);
+    margin-bottom: 0px;
+    margin-top: 10px;
+    margin-left: 15px;
+    font-family: sans-serif;
+    font-size: 40px;
+    border: 1px solid;
+border-color: antiquewhite; 
+border-radius: 3px;   
+}
+#buttons{
+    width: 470px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    
+    margin-left: 25px;
+
+}
+button{
+    width: 85px;
+    height: 55px;
+    background-color: rgba(199, 190, 208, 0.955);
+    
+
+
+}
+#solar{
+    background-color: rgba(226, 8, 8, 0.133);
+    height: 40px;
+    width: 200px;
+    margin-left: 270px;
+    border-radius: 30px;
+    
+    
+    
+    
+
+}
+#casio{
+    color: antiquewhite;
+  height: 10px;
+  padding-left: 20px;
+    
+}
+
+
+
+</style>
+
+
+<script>
+
+x=document.getElementById("screen");
+function send(i)
+{
+    switch(i)
+    {
+        case 0: x.value=x.value+0; //+ useing here is we are getting in only string not numbers so if we pree 1 double time it show 11.
+    break;
+        case 1: x.value=x.value+1; 
+    break;
+    case 2: x.value=x.value+2; 
+    break;
+    case 3: x.value=x.value+3; 
+    break;
+    case 4: x.value=x.value+4; 
+    break;
+    case 5: x.value=x.value+5; 
+    break;
+    case 6: x.value=x.value+6; 
+    break;
+    case 7: x.value=x.value+7; 
+    break;
+    case 8: x.value=x.value+8; 
+    break;
+    case 9: x.value=x.value+9; 
+    break;
+
+    case '+': x.value=x.value+'+'; 
+    break;
+    case '-': x.value=x.value+'-'; 
+    break;
+    case '*': x.value=x.value+'*'; 
+    break;
+    case '/': x.value=x.value+'/'; 
+    break;
+    case'.': x.value=x.value+'.';
+    break;
+    case 'AC': x.value =""; 
+    break;
+
+    case '=':
+        result=eval(x.value);
+        x.value=result;
+      break;
+
+    case 'log':
+        result=eval(Math.log10(x.value));
+        x.value=result;
+        break;
+
+        case 'root':
+            result=eval(Math.sqrt(x.value));
+            x.value=result;
+        break;
+
+        case 'inverse':
+            result=eval(1/x.value);
+            x.value=result;
+        break;
+
+        
+        
+            
+}
+}
+
+
+
+</script>
+
+
+</html>
